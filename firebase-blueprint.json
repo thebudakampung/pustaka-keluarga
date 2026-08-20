@@ -1,0 +1,63 @@
+{
+  "collections": [
+    {
+      "path": "books/{bookId}",
+      "description": "Katalog buku perpustakaan",
+      "fields": [
+        { "name": "id", "type": "string", "description": "ID Unik Buku" },
+        { "name": "noBil", "type": "number", "description": "Nombor Bilangan" },
+        { "name": "judul", "type": "string", "description": "Judul Buku" },
+        { "name": "pengarang", "type": "string", "description": "Pengarang" },
+        { "name": "penerbit", "type": "string", "description": "Penerbit" },
+        { "name": "tempatTerbit", "type": "string", "description": "Tempat Terbit" },
+        { "name": "tahunTerbit", "type": "string", "description": "Tahun Terbit" },
+        { "name": "isbn", "type": "string", "description": "ISBN" },
+        { "name": "noDdc", "type": "string", "description": "Nombor DDC" },
+        { "name": "status", "type": "string", "description": "Status Rekod (Draf / Perlu Semakan / Lengkap)" },
+        { "name": "catatan", "type": "string", "description": "Catatan Tambahan" },
+        { "name": "nomborPerolehan", "type": "string", "description": "Nombor Perolehan Perpustakaan" },
+        { "name": "tarikhDitambah", "type": "string", "description": "Tarikh Ditambah" },
+        { "name": "urlGambarKulit", "type": "string", "description": "URL Gambar Kulit Buku" },
+        { "name": "urlHalamanHakCipta", "type": "string", "description": "URL Halaman Hak Cipta" },
+        { "name": "spinePrinted", "type": "boolean", "description": "Status Label Cetak Tulang Buku" },
+        { "name": "spinePrintedDate", "type": "string", "description": "Tarikh Label Tulang Cetak" },
+        { "name": "tags", "type": "array", "description": "Tag Katalog" },
+        { "name": "confidenceScores", "type": "map", "description": "Skor Keyakinan OCR AI" },
+        { "name": "detectedLanguage", "type": "string", "description": "Bahasa Dikesan" },
+        { "name": "auditTrail", "type": "array", "description": "Jejak Audit Kemaskini Buku" }
+      ]
+    },
+    {
+      "path": "settings/{docId}",
+      "description": "Tetapan Perpustakaan dan Tetapan Templat Label Tulang Buku / Peraturan DDC",
+      "fields": [
+        { "name": "namaPerpustakaan", "type": "string", "description": "Nama Perpustakaan" },
+        { "name": "kodPerpustakaan", "type": "string", "description": "Kod Perpustakaan" },
+        { "name": "ambangConfidence", "type": "number", "description": "Ambang Confidence" },
+        { "name": "autoDdcSuggestion", "type": "boolean", "description": "Auto Cadangan DDC" },
+        { "name": "temaWarna", "type": "string", "description": "Tema Warna" },
+        { "name": "aiMode", "type": "string", "description": "Mod AI" },
+        { "name": "templates", "type": "array", "description": "Senarai Templat Label Tulang Buku" },
+        { "name": "selectedTemplateId", "type": "string", "description": "ID Templat Aktif" },
+        { "name": "rules", "type": "array", "description": "Senarai Peraturan Automatik DDC" },
+        { "name": "autoDdcColorEnabled", "type": "boolean", "description": "Status Penggunaan Warna DDC Automatik" },
+        { "name": "customDdcColors", "type": "map", "description": "Kustomisasi Warna DDC" }
+      ]
+    },
+    {
+      "path": "deletedAuditLogs/{logId}",
+      "description": "Log Audit Pembatalan / Pemadaman Buku",
+      "fields": [
+        { "name": "id", "type": "string", "description": "ID Log Audit" },
+        { "name": "bookId", "type": "string", "description": "ID Buku" },
+        { "name": "bookTitle", "type": "string", "description": "Judul Buku" },
+        { "name": "timestamp", "type": "string", "description": "Masa Pemadaman" },
+        { "name": "field", "type": "string", "description": "Medan" },
+        { "name": "oldValue", "type": "string", "description": "Nilai Asal" },
+        { "name": "newValue", "type": "string", "description": "Nilai Baharu" },
+        { "name": "source", "type": "string", "description": "Sumber Perubahan" },
+        { "name": "user", "type": "string", "description": "Pengguna" }
+      ]
+    }
+  ]
+}

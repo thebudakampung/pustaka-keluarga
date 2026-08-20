@@ -1,0 +1,10 @@
+{
+  "name": "Remix Sistem Mini Perpustakaan AI",
+  "description": "Sistem katalog perpustakaan mini dengan OCR AI, carian metadata bibliografi automatik, pengurusan rekod draf, log audit, dan cetakan label tulang buku.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
